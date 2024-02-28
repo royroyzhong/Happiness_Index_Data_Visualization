@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Project</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans" rel="stylesheet"> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+  </head>
+  <body>
+    <h1 id="map-h1">Happiness Index</h1>
+    <div id = "desc">
+      <p>
+        This is the world happiness report. You can choose countries that interest 
+        you from the world map, and then you can view their specific attributes by scrolling the webpage. 
+        After that, you can also discover the correlation of each attribute with its happiness level.
+
+      </p>
+
+    </div>
+    <div id="mapWidgets">
+      <div id="year-slider"></div>
+      <input id="mapSearch" type="text" name="" placeholder="Search for a country">
+      <button id="clear" type="button">Clear all</button>
+    </div>
+    <div class="container">
+      <div id="map"></div>
+      <div id="map-tooltip"></div>
+      <select id="filterScatter"></select>
+      <div class="scatterplot"><svg id="scatterplot"></svg></div>
+
+      <div id="scatterplot-tooltip"></div>
+      <div id="spider-tooltip"></div>
+      <div id="spider"></div>
+      
+
+      <div id="prose">
+        <div class="step" id="step0">Life Ladders</div>
+        <div class="step" id="step1">Social Support</div>
+        <div class="step" id="step2">Log GDP per capita</div>
+        <div class="step" id="step3">Healthy life expectancy at birth</div>
+        <div class="step" id="step4">Freedom to make life choices</div>
+        <div class="step" id="step5">Perceptions of corruption</div>
+        <div class="step" id="step6">Positive affect</div>
+        <div class="step" id="step7">Negative affect</div>
+        <div class="step" id="step8">Generosity</div>
+      </div>
+      <div class="smiley"><svg id="smiley"></svg></div>
+    </div>
+    
+    <script src="js/d3.v6.min.js"></script>
+    <script src="https://unpkg.com/d3-simple-slider"></script>
+    <script src="js/topojson.v3.js"></script>
+    <script src="js/noframework.waypoints.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/choroplethMap.js"></script>
+    <script src="js/scatterplot.js"></script>
+    <script src="js/SpiderChart.js"></script>
+    <script src="js/smileyface.js"></script>
+  </body>
+</html>
